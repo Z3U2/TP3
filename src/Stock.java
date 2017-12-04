@@ -26,6 +26,14 @@ public class Stock extends LinkedList<Produit> implements Cloneable{
                 // Optional could be replaced with OlderPredicate cf next line and OlderPredicate Class
 //                .filter(new OlderPredicate(pr))
                 .collect(Collectors.toCollection(Stock::new));
+        // Could also be done with a simple loop :
+//         Stock res = new Stock();
+//         for (Produit p : this ) {
+//             if(p.isOlder(pr)){
+//                 res.add(p);
+//             }
+//         }
+//         return res;
     }
 
     public void removeOlder(Date dt) {
